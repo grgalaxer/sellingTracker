@@ -1,0 +1,295 @@
+body {
+   margin: 0;
+}
+section {
+   margin: 0;
+   font-family: "League Spartan", serif;
+   height: 1200px;
+   background: linear-gradient(rgb(0, 0, 0), rgb(1, 53, 83));
+   border-bottom: 1px solid rgba(9, 91, 158, 0.349);
+}
+.mobile {
+   background: linear-gradient(rgb(1, 53, 83), rgb(0, 0, 0));
+   display: block;
+}
+.pc {
+   display: block;
+}
+.pc2 {
+   display: none;
+}
+.mobile2 {
+   display: none;
+   background: linear-gradient(rgb(1, 53, 83), rgb(0, 0, 0));
+}
+.collection {
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.title {
+   width: 100%;
+   float: left;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 64px;
+   top: 0;
+   color: #5fc7f0;
+}
+.tilt {
+   width: 200px;
+   height: 200px;
+   background: linear-gradient(rgb(0, 0, 0), rgb(1, 53, 83));
+   border: 1px solid rgb(0, 0, 0);
+   box-shadow: 0 0 10px 1px rgb(0, 0, 0) inset;
+   margin: 20px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 24px;
+   color: #d4d4d4;
+   
+
+}
+.card {
+   float: left;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   width: 300px;
+   /* Фиксированная ширина */
+   height: 350px;
+   /* Фиксированная высота */
+   margin: 20px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   transition: transform 0.3s;
+}
+
+.card:hover {
+   transform: scale(1.05);
+   /* Увеличиваем карточку при наведении */
+}
+
+.card-image {
+   width: 70%;
+   height: 200px;
+   transform: scale(0.9);
+   /* Высота изображения */
+   object-fit: cover;
+   /* Обеспечивает, что изображение заполнит контейнер */
+}
+
+.card-title {
+   font-size: 20px;
+   margin: 15px;
+   /* Отступы вокруг названия */
+   text-align: center;
+   /* Центрируем текст */
+   color: #c7c7c7;
+
+}
+.color {
+   color: #5fc7f0;
+}
+.cont {
+      /* Центрируем по вертикали */
+      padding: 10px;
+}
+.card-footer {
+   display: flex;
+   justify-content: space-between;
+   /* Разделяем элементы внизу */
+   align-items: center;
+   /* Центрируем по вертикали */
+   padding: 15px;
+ 
+   /* Отступы вокруг */
+}
+
+.card-footer2 {
+   margin: 0;
+   padding: 0;
+}
+
+.card-price {
+   font-size: 18px;
+   color: #5fc7f0;
+   text-align: center;
+   /* Красный цвет для цены */
+}
+
+.card-button {
+   background-color: #5fc7f0;
+   /* Зеленая кнопка */
+   color: rgb(0, 0, 0);
+   font-weight: 500;
+   border: none;
+   padding: 10px 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.card-button2 {
+   background-color: #5fc7f0;
+   /* Зеленая кнопка */
+   color: rgb(0, 0, 0);
+   font-weight: 500;
+   border: none;
+   margin-top: 20px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.card-button:hover {
+   background-color: #000000;
+   color: #5fc7f0;
+   /* Темно-зеленый при наведении */
+}
+.card-button2:hover {
+   background-color: #000000;
+   color: #5fc7f0;
+   /* Темно-зеленый при наведении */
+}
+
+swiper-container {
+   width: 100%;
+}
+
+swiper-slide {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+@media (max-width: 450px) {
+   section {
+      height: 300vw;
+   }
+   .pc {
+      display: none;
+   }
+   .mobile {
+      display: none;
+      padding: 10px;
+      /* Adjust padding for smaller screens */
+      text-align: center;
+      /* Center the text for better readability */
+   }
+   .mobile2 {
+      display: block;
+   }
+   .pc2 {
+      display: block;
+   }
+
+   .title {
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Smaller title font size */
+      height: 100px;
+      /* Space below the title */
+   }
+
+   .card {
+      width: 40vw;
+      height: 55vw;
+      /* Full width of the container */
+      max-width: 300px;
+      /* Limit card width for better appearance */
+      margin-bottom: 20px;
+      /* Space between cards */
+      border: 1px solid #ccc;
+      /* Optional border for visual separation */
+      border-radius: 8px;
+      /* Rounded corners for the cards */
+      overflow: hidden;
+      /* Prevent overflow of content */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      /* Subtle shadow for depth */
+      font-size: 10px;
+   }
+
+   .card-image {
+      width: 80%;
+      /* Make images responsive */
+      height: auto;
+      /* Maintain aspect ratio */
+   }
+
+   .card-footer {
+      padding: 0;
+      float: left;
+      width: 100%;
+   }
+
+      .card-footer2 {
+         padding: 5px;
+         float: left;
+         height: 20px !important;
+         margin: 0 !important;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+      }
+   .card-title {
+      font-size: 20px !important;
+      font-size: 1.2em;
+      /* Smaller font for titles */
+      margin: 10px 0;
+      /* Space around title */
+   }
+
+   .card-price {
+      font-size: 14px !important;
+      font-size: 1em;
+      /* Adjust price font size */
+   }
+
+      .card-button {
+         background-color: #5fc7f0;
+         /* Зеленая кнопка */
+         color: rgb(0, 0, 0);
+         font-weight: 500;
+         border: none;
+         height: 30px;
+         width: 80px;
+         margin: 0 20px 0 0;
+         padding: 0;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+      .card-button2 {
+         background-color: #5fc7f0;
+         /* Зеленая кнопка */
+         color: rgb(0, 0, 0);
+         font-weight: 500;
+         border: none;
+         margin-top: 0px;
+         padding: 0;
+         height: 30px;
+         width: 80px;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+
+   .card-button:hover {
+      background-color: #0056b3;
+      /* Darker shade on hover */
+   }
+}
